@@ -34,7 +34,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="grid grid-cols-[auto_1fr] gap-4 p-4">
+            <div className="min-h-screen grid grid-cols-[auto_1fr] gap-4 p-4">
               {children}
               <DisclaimerCard />
             </div>
