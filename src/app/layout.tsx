@@ -1,3 +1,4 @@
+import DisclaimerCard from "@/components/disclaimer-card";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -35,6 +36,7 @@ export default function RootLayout({
           >
             <div className="grid grid-cols-[auto_1fr] gap-4 p-4">
               {children}
+              <DisclaimerCard />
             </div>
           </ThemeProvider>
         </body>
