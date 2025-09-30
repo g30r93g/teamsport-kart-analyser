@@ -72,7 +72,7 @@ export function VenueSelector({
                       key={venue.id}
                       value={venue.id}
                       onSelect={() => {
-                        onVenueSelect(isSelected ? null : venue.id)
+                        onVenueSelect(isSelected ? undefined : venue.id)
                         setOpen(false)
                       }}
                     >
