@@ -3,6 +3,7 @@ import { date, integer, numeric, pgTable, text, uuid } from "drizzle-orm/pg-core
 export const venue = pgTable("venue", {
     clientKey: text("clientKey").primaryKey(),
     name: text("name").notNull(),
+    baseAddress: integer("baseAddress").notNull(),
 });
 
 export const kartRecord = pgTable("kart_record", {
