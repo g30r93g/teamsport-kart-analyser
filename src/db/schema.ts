@@ -1,16 +1,16 @@
 import { date, integer, numeric, pgTable, text, uuid } from "drizzle-orm/pg-core";
 
 export const venue = pgTable("venue", {
-    id: uuid("id").primaryKey().defaultRandom(),
+    clientKey: text("clientKey").primaryKey(),
     name: text("name").notNull(),
 });
 
 export const kartRecord = pgTable("kart_record", {
     id: uuid("id").primaryKey().defaultRandom(),
     date: date("day").notNull(),
-    venue: uuid("venue")
+    venue: text("venue")
         .notNull()
-        .references(() => venue.id, { onDelete: "cascade" }),
+        .references(() => venue.clientKey, { onDelete: "cascade" }),
     resourceId: text("resource_id").notNull(),
     scoregroupId: text("scoregroup_id").notNull(),
 
